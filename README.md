@@ -6,6 +6,8 @@ Our paper has been accepted by ACM MM 2023 [[paper]](https://arxiv.org/abs/2307.
 
 ## Datasets
 
+**anomaly source dataset**
+
 **MVTec 3D AD download**
 
 **eyecandies download**
@@ -14,23 +16,15 @@ Our paper has been accepted by ACM MM 2023 [[paper]](https://arxiv.org/abs/2307.
 
 ## Training
 
-### **train RGB branch**
+### train RGB/depth branch
 
 ```
-python trainer_rgb_fu.py --gpu_id (your gpu id) --obj_id (dataset class id) --layer_size 2layer --mode_type RGB
-```
-
-
-
-### **train depth branch**
-
-```
-python trainer_rgb_fu.py --gpu_id (your gpu id) --obj_id (dataset class id) --layer_size 2layer --mode_type Depth
+python trainer_rgb_fu.py --gpu_id (your gpu id) --obj_id (dataset class id) --layer_size 2layer --mode_type RGB/Depth
 ```
 
 
 
-### **train fusion branch**
+### train fusion branch
 
 train type1：
 
