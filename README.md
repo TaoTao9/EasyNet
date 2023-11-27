@@ -42,6 +42,8 @@ python trainer_rgb_fu.py --gpu_id (your gpu id) --obj_id (dataset class id) --la
 
 ## Pretrained models
 
+[Links to model weights](https://drive.google.com/file/d/12Ygza5bzHdPFTLRgTyL2saio01IOTdgx/view?usp=drive_link)
+
 ## Evaluating
 
 ```
@@ -50,11 +52,12 @@ python test.py --bs (dataset class id)\\
 
 ```
 
-
+## Citations
+Please consider citing our papers if you use the code:
 
 ```
 @inproceedings{10.1145/3581783.3611876,
-author = {Chen, Ruitao and Xie, Guoyang and Liu, Jiaqi and Wang, Jinbao and Luo, Ziqi and Wang, Jinfan and Zheng, Feng},
+author = {Chen, Ruitao and Xie, Guoyang and Liu, Jiaqi and Wang, Jinbao and Luo, Ziqi and Wang, Jinfan and Zheng Feng},
 title = {EasyNet: An Easy Network for 3D Industrial Anomaly Detection},
 year = {2023},
 booktitle = {Proceedings of the 31st ACM International Conference on Multimedia},
