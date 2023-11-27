@@ -7,6 +7,17 @@ Our paper has been accepted by ACM MM 2023 [[paper]](https://arxiv.org/abs/2307.
 ## Datasets
 
 **anomaly source dataset**
+The Describable Textures dataset was used as the anomaly source image set in most of the experiments in the paper. You can run the follow code from the project directory to download the MVTec and the DTD datasets to the datasets folder in the project directory:
+
+```shell
+mkdir datasets
+cd datasets
+# Download describable textures dataset
+wget https://www.robots.ox.ac.uk/~vgg/data/dtd/download/dtd-r1.0.1.tar.gz
+tar -xf dtd-r1.0.1.tar.gz
+rm dtd-r1.0.1.tar.gz
+```
+
 
 **MVTec 3D AD download**
 
@@ -18,7 +29,7 @@ Our paper has been accepted by ACM MM 2023 [[paper]](https://arxiv.org/abs/2307.
 
 ### train RGB/depth branch
 
-```
+```shell
 python trainer_rgb_fu.py --gpu_id (your gpu id) --obj_id (dataset class id) --layer_size 2layer --mode_type RGB/Depth
 ```
 
@@ -28,13 +39,13 @@ python trainer_rgb_fu.py --gpu_id (your gpu id) --obj_id (dataset class id) --la
 
 train type1：
 
-```
+```shell
 python trainer_rgb_fu.py --gpu_id (your gpu id) --obj_id (dataset class id) --layer_size 2layer --mode_type RGBD
 ```
 
 train type2：
 
-```
+```shell
 python trainer_rgb_fu.py --gpu_id (your gpu id) --obj_id (dataset class id) --layer_size 2layer --mode_type RGBD
 ```
 
@@ -46,7 +57,7 @@ python trainer_rgb_fu.py --gpu_id (your gpu id) --obj_id (dataset class id) --la
 
 ## Evaluating
 
-```
+```shell
 python test.py --bs (dataset class id)\\
 --gpu_id (your gpu id)\\
 
