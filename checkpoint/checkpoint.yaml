@@ -1,0 +1,77 @@
+Model_type:
+  1layerDepth: model.easynet_1layer_single
+  1layerFusion1: model.easynet_1layer_Fusion1
+  1layerFusion2: model.easynet_1layer_Fusion2
+  1layerRGB: model.easynet_1layer_single
+  1layerRGBD: model.easynet_1layer_mul
+  2layerDepth: model.easynet_2layer_single
+  2layerFusion1: model.easynet_2layer_Fusion1
+  2layerFusion2: model.easynet_2layer_Fusion2
+  2layerRGB: model.easynet_2layer_single
+  2layerRGBD: model.easynet_2layer_mul
+  3layerDepth: model.easynet_3layer_single
+  3layerFusion1: model.easynet_3layer_Fusion1
+  3layerFusion2: model.easynet_3layer_Fusion2
+  3layerRGB: model.easynet_3layer_single
+  3layerRGBD: model.easynet_3layer_mul
+
+
+anomaly_source_path: /home/yangzesheng/tao_workspace/images
+dataset_path_Mvtec3D_AD: /home/yangzesheng/tao_workspace/mvtec3d
+dataset_path_Eyecandies: 
+weight_save_path: ./weight/
+log_path: ./logs/
+record_path: ./output/
+pic_path_train: ./visual_train/
+pic_path_test: ./visual_test/
+
+eyecandies:
+  checkpoint_depth: []
+  checkpoint_fusion: []
+  checkpoint_rgb: []
+mvted3dad:
+  checkpoint_depth: 
+    bagel: ./weight/2layer_Depth/bagel_best.pth
+    cable_gland: ./weight/2layer_Depth/cable_gland_best.pth
+    carrot: ./weight/2layer_Depth/carrot_best.pth
+    cookie: ./weight/2layer_Depth/cookie_best.pth
+    dowel: ./weight/2layer_Depth/dowel_best.pth
+    foam: ./weight/2layer_Depth/foam_best.pth
+    peach: ./weight/2layer_Depth/peach_best.pth
+    potato: ./weight/2layer_Depth/potato_best.pth
+    rope: ./weight/2layer_Depth/rope_best.pth
+    tire: ./weight/2layer_Depth/tire_best.pth
+  checkpoint_fusion: 
+    bagel: ./weight/2layer_Fusion1/bagel_best.pth
+    cable_gland: ./weight/2layer_Fusion1/cable_gland_best.pth
+    carrot: ./weight/2layer_Fusion1/carrot_best.pth
+    cookie: ./weight/2layer_Fusion1/cookie_best.pth
+    dowel: ./weight/2layer_Fusion1/dowel_best.pth
+    foam: ./weight/2layer_Fusion1/foam_best.pth
+    peach: ./weight/2layer_Fusion1/peach_best.pth
+    potato: ./weight/2layer_Fusion1/potato_best.pth
+    rope: ./weight/2layer_Fusion1/rope_best.pth
+    tire: ./weight/2layer_Fusion1/tire_best.pth
+  checkpoint_rgb: 
+    bagel: ./weight/2layer_RGB/bagel_best_rgb.pth
+    cable_gland: ./weight/2layer_RGB/cable_gland_best_rgb.pth
+    carrot: ./weight/2layer_RGB/carrot_best_rgb.pth
+    cookie: ./weight/2layer_RGB/cookie_best_rgb.pth
+    dowel: ./weight/2layer_RGB/dowel_best_rgb.pth
+    foam: ./weight/2layer_RGB/foam_best_rgb.pth
+    peach: ./weight/2layer_RGB/peach_best_rgb.pth
+    potato: ./weight/2layer_RGB/potato_best_rgb.pth
+    rope: ./weight/2layer_RGB/rope_best_rgb.pth
+    tire: ./weight/2layer_RGB/tire_best_rgb.pth
+
+  entropy: 
+    bagel: 0.38
+    cable_gland: 0.44
+    carrot: 0.0
+    cookie: 0.0
+    dowel: 0.0
+    foam: 0.0
+    peach: -0.29
+    potato: 0.0
+    rope: -0.11
+    tire: 0.0
