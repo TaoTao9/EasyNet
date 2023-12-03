@@ -63,7 +63,7 @@ python trainer_rgb_fu.py --gpu_id (your gpu id) --obj_id (dataset class id) --la
 
 ## Pretrained models
 
-[Links to model weights](https://drive.google.com/file/d/12Ygza5bzHdPFTLRgTyL2saio01IOTdgx/view?usp=drive_link)
+[Links to model weights](https://drive.google.com/drive/folders/17N-4SgQDpjG0zf4uOVDDo0oNOeVQ1xN7?usp=drive_link)
 
 ## Evaluating
 
