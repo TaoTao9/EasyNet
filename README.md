@@ -21,9 +21,19 @@ rm dtd-r1.0.1.tar.gz
 
 **MVTec 3D AD download**
 
+- The `MVTec-3D AD` dataset can be download from the [Official Website of MVTec-3D AD](https://www.mvtec.com/company/research/datasets/mvtec-3d-ad).
+
 **eyecandies download**
 
+- The `Eyecandies` dataset can be download from the [Official Website of Eyecandies](https://eyecan-ai.github.io/eyecandies/).
+
+After download, put the dataset in `dataset` folder.
+
 **dataset processing**
+
+```shell
+python utils/preprocessing.py datasets/mvtec3d/
+```
 
 ## Training
 
