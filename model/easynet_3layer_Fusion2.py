@@ -13,9 +13,7 @@ def init_weight(m):
 class ReconstructiveSubNetwork(nn.Module):
     def __init__(self,in_channels=3, out_channels=3, base_width=128,img_size=256,train_model=True):
         super(ReconstructiveSubNetwork, self).__init__()
-        self.encoder = EncoderReconstructive(in_channels, base_width)
         self.encoder_d = EncoderReconstructive(in_channels, base_width)
-        self.decoder = DecoderReconstructive(base_width, out_channels=out_channels)
         self.decoder_d = DecoderReconstructive(base_width, out_channels=out_channels)
         self.hidden_size = 512
         self.hidden_size1 = 256
@@ -55,7 +53,7 @@ class ReconstructiveSubNetwork(nn.Module):
             self.apply(init_weight)
 
     def forward(self, d, merge_rgb):
-        d1,d2,d3,d5 = self.encoder(d)
+        d1,d2,d3,d5 = self.encoder_d(d)
       
         output_d,dd2,dd3,dd4 = self.decoder_d(d5)   
 
