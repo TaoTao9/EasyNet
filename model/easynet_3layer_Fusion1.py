@@ -83,7 +83,7 @@ class ReconstructiveSubNetwork(nn.Module):
 
     def forward(self, x, d):
         b1,b2,b3,b5 = self.encoder(x)
-        d1,d2,d3,d5 = self.encoder(d)
+        d1,d2,d3,d5 = self.encoder_d(d)
 
         output,db2,db3,db4 = self.decoder(b5)        
         output_d,dd2,dd3,dd4 = self.decoder_d(d5)   
