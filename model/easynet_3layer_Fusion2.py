@@ -20,17 +20,17 @@ class ReconstructiveSubNetwork(nn.Module):
         self.hidden_size2 = 2
         self.img_size = img_size
 
-        self.mlp1 = nn.Sequential(
+        self.mlp1_d = nn.Sequential(
             nn.Conv2d(base_width*2,self.hidden_size, kernel_size=1, stride=1),
             nn.BatchNorm2d(self.hidden_size),
             nn.LeakyReLU(0.2)
         )
-        self.mlp2 = nn.Sequential(
+        self.mlp2_d = nn.Sequential(
             nn.Conv2d(base_width*3,self.hidden_size, kernel_size=1, stride=1),
             nn.BatchNorm2d(self.hidden_size),
             nn.LeakyReLU(0.2)
         )
-        self.mlp3 = nn.Sequential(
+        self.mlp3_d = nn.Sequential(
             nn.Conv2d(base_width*6,self.hidden_size, kernel_size=1, stride=1),
             nn.BatchNorm2d(self.hidden_size),
             nn.LeakyReLU(0.2)
