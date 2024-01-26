@@ -67,8 +67,10 @@ python trainer_rgb_fu.py --gpu_id (your gpu id) --obj_id (dataset class id) --la
 
 ## Evaluating
 
+If you use the weights provided by us, please use Fusion1 mode for "--mode_type"
+
 ```shell
-python test.py --gpu_id 0 --obj_id -1 --layer_size 2layer --mode_type Fusion
+python test.py --gpu_id 0 --obj_id -1 --layer_size 2layer --mode_type Fusion1
 python test.py --gpu_id 0 --obj_id -1 --layer_size 2layer --mode_type RGB
 
 ```
