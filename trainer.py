@@ -319,7 +319,8 @@ def train_on_device(obj_names, args, dataset_checkpoint):
             if epoch % 50 == 0:
                 print("Epoch: "+str(epoch)+"  loss:"+str(loss_all)+"AUC Image:  " +str(auroc)+"AP Image:  " +str(ap)+"AUC Pixel:  " +str(auroc_pixel)+"AP Pixel:  " +str(ap_pixel))
             
-            if (auroc_old < auroc) or (auroc_old == auroc and auroc_pixel_old < auroc_pixel):
+            if (epoch > 200) and (auroc_old < auroc) or (auroc_old == auroc and auroc_pixel_old < auroc_pixel):
+                # use early stop，for there are many loss targets (ssim loss、focal loss and mse loss) to converge, the convergence curve fluctuates greatly.
                 torch.save(model.state_dict(), os.path.join(args.weight_save_path, args.layer_size + '_' + args.mode_type, run_name+"best.pckl"))
                 auroc_old = auroc
                 auroc_pixel_old = auroc_pixel
@@ -346,7 +347,7 @@ if __name__=="__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--obj_id', type=int, nargs='+',required=True)
     parser.add_argument('--bs', type=int, default=4, required=False)
-    parser.add_argument('--lr', type=float, default=0.0002, required=False)
+    parser.add_argument('--lr', type=float, default=0.0001, required=False)
     parser.add_argument('--seed', type=int, default=66, required=False)
     parser.add_argument('--start_epoch', type=int, default = 0, required=False)
     parser.add_argument('--epochs', type=int, default=770, required=False)
