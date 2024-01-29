@@ -40,7 +40,7 @@ python utils/preprocessing.py datasets/mvtec3d/
 ### train RGB/depth branch
 
 ```shell
-python trainer_rgb_fu.py --gpu_id (your gpu id) --obj_id (dataset class id) --layer_size 2layer --mode_type RGB/Depth
+python trainer.py --gpu_id (your gpu id) --obj_id (dataset class id) --layer_size 2layer --mode_type RGB/Depth
 ```
 
 
@@ -50,13 +50,13 @@ python trainer_rgb_fu.py --gpu_id (your gpu id) --obj_id (dataset class id) --la
 train type1：
 
 ```shell
-python trainer_rgb_fu.py --gpu_id (your gpu id) --obj_id (dataset class id) --layer_size 2layer --mode_type Fusion1
+python trainer.py --gpu_id (your gpu id) --obj_id (dataset class id) --layer_size 2layer --mode_type Fusion1
 ```
 
 train type2：
 
 ```shell
-python trainer_rgb_fu.py --gpu_id (your gpu id) --obj_id (dataset class id) --layer_size 2layer --mode_type Fusion2
+python trainer.py --gpu_id (your gpu id) --obj_id (dataset class id) --layer_size 2layer --mode_type Fusion2
 ```
 
 
@@ -67,7 +67,9 @@ python trainer_rgb_fu.py --gpu_id (your gpu id) --obj_id (dataset class id) --la
 
 ## Evaluating
 
-If you use the weights provided by us, please use Fusion1 mode for "--mode_type", and check the path where the "checkpoint.yaml" weights are configured
+If you use the weights provided by us, please use Fusion1 mode for "--mode_type", and check the path where the "checkpoint.yaml" weights are configured.
+
+During the test, please test according to the corresponding training mode, that is, "--mode_type" must be the same as during the training.
 
 ```shell
 python test.py --gpu_id 0 --obj_id -1 --layer_size 2layer --mode_type Fusion1
