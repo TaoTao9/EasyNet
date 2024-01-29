@@ -345,9 +345,9 @@ if __name__=="__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--obj_id', type=int, nargs='+',required=True)
-    parser.add_argument('--bs', type=int, default=8, required=False)
+    parser.add_argument('--bs', type=int, default=4, required=False)
     parser.add_argument('--lr', type=float, default=0.0002, required=False)
-    parser.add_argument('--seed', type=int, default=65, required=False)
+    parser.add_argument('--seed', type=int, default=66, required=False)
     parser.add_argument('--start_epoch', type=int, default = 0, required=False)
     parser.add_argument('--epochs', type=int, default=770, required=False)
     parser.add_argument('--gpu_id', type=int, default=7, required=False)
@@ -365,7 +365,7 @@ if __name__=="__main__":
 
     parser.add_argument('--save_picture', action='store_true', help='Save the visual data')
 
-    parser.add_argument('--checkpoint_yaml', type=str, default="/home/yangzesheng/tao_workspace/easynet_union/EasyNet/checkpoint/checkpoint.yaml", required=False)
+    parser.add_argument('--checkpoint_yaml', type=str, default="./checkpoint/checkpoint.yaml", required=False)
 
 
     args = parser.parse_args()
