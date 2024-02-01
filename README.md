@@ -47,7 +47,7 @@ python trainer.py --gpu_id (your gpu id) --obj_id (dataset class id) --layer_siz
 
 ### train fusion branch
 
-The train type2 mode is recommended for the training method because the reconstruction task has multiple losses, the results may fluctuate, and fine-tuning of the actual class parameters may be required.
+Since the reconstruction task has multiple losses that need to be optimized, the model loss convergence is difficult. It is recommended to use the training type 2 mode as the training method, and adjust the parameters of iteration step size, seed and so on according to the actual situation.
 
 train type1：
 
