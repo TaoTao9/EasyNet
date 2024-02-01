@@ -347,10 +347,10 @@ if __name__=="__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--obj_id', type=int, nargs='+',required=True)
     parser.add_argument('--bs', type=int, default=4, required=False)
-    parser.add_argument('--lr', type=float, default=0.0001, required=False)
+    parser.add_argument('--lr', type=float, default=0.0002, required=False)
     parser.add_argument('--seed', type=int, default=66, required=False)
     parser.add_argument('--start_epoch', type=int, default = 0, required=False)
-    parser.add_argument('--epochs', type=int, default=770, required=False)
+    parser.add_argument('--epochs', type=int, default=1000, required=False)
     parser.add_argument('--gpu_id', type=int, default=7, required=False)
 
     parser.add_argument('--pretrain', action='store_true', help='Save the visual data')
